@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+.topnav {
+  overflow: hidden; 
+  background-color: rgb(26, 197, 240);
+  
+}
+
+.topnav h1 {
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.sidebar {
+  width: 30%;
+  position: fixed;
+  height:80%;
+  top: 100px;
+  left: 8px;
+  background: rgb(26, 197, 240);
+  overflow: hidden;
+   
+}
+ .container{
+  width: 64%;
+  position: fixed;
+  height:79%;
+  top: 100px;
+  left: 35%;
+  background: rgb(26, 197, 240);
+  overflow: hidden;
+  border: 4px solid whitesmoke;
+}
+
+.collapsible{
+  width:100%;
+  height:5%;
+  top: 120px;
+  left: 40%;
+  background: white;
+  overflow: hidden;
+  border: 4px solid rgb(26, 197, 240);
+  outline: none;
+  color:black;
+}
+.active, .collapsible:hover {
+  background-color: rgb(138, 127, 127);
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+   width: 97%;
+   position: fixed;
+   height:10%;
+   top: 100px;
+   left: 8px;
+   background:  rgb(26, 197, 240);
+   overflow: hidden;
+   }
+  .container{
+  width: 95%;
+  position: fixed;
+  height:70%;
+  top: 28%;
+  left: 2%;
+  background: rgb(26, 197, 240);
+  
+  overflow: hidden;
+  border: 4px solid whitesmoke;
+}
+.collapsible{
+  width:100%;
+  
+  height:5%;
+  top: 28%;
+  left: 5%;
+  background:  rgb(234, 232, 238);
+  overflow: hidden;
+  border: 4px solid rgb(26, 197, 240);
+  color:#333;
+}
+.content {
+  padding:30px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <h1>FARMERS BUDDY </h1>
+</div>
+
+ <div class="sidebar">
+   
+ </div>
+ <div class="container">
+  <button type="button" class="collapsible"><b>Crops</b></button>
+   <div class="content">
+    <p>crops fall into six categories: food crops, feed crops, fiber crops, oil crops, ornamental crops, and industrial crops. Food crops, such as fruit and vegetables, are harvested for human consumption. Grains, such as corn, wheat, and rice, are the world’s most popular food crops.</p>
+   </div>
+   <button type="button" class="collapsible"><b>pulses</b></button>
+   <div class="content">
+    <p>Pulses may be defined as the dried edible seeds of cultivated legume. They belong to the family of peas, beans and lentils. The pulses are a large family and various species are capable or surviving in very different climates and soils.</p>
+   </div>
+   <button type="button" class="collapsible"><b>pulses</b></button>
+   <div class="content">
+    <p>Pulses may be defined as the dried edible seeds of cultivated legume. They belong to the family of peas, beans and lentils. The pulses are a large family and various species are capable or surviving in very different climates and soils.</p>
+   </div>
+</div>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+   
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+    
+    coll[i].addEventListener("click", function() {
+      var content2 = this.previousElementSibling;
+      if (content2.style.display === "block") {
+        content2.style.display = "none";
+      } 
+    });
+     
+   
+
+  }
+  </script>
+</body>
+</html>
